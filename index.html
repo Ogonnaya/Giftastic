@@ -25,10 +25,11 @@
   <body>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <form id="animal-form">
+        <form id="fruit-search">
           <h1>The Amazing World of Fruit Gifs</h1>
           <div class="input-group input-group-lg col-md-12">
             <input
+              id="fruit-input"
               type="text"
               placeholder="Add a fruit"
               class="form-control col-md-9"
@@ -36,6 +37,8 @@
               aria-describedby="inputGroup-sizing-sm"
             />
             <br />
+
+            <!-- New button added when submit is pushed -->
             <input
               id="add-fruit"
               class="btn btn-primary col-md-3"
@@ -45,6 +48,16 @@
           </div>
         </form>
       </div>
+    </div>
+
+    <!-- Fruit buttons appear here -->
+    <div class="container">
+      <div id="fruit-buttons"></div>
+    </div>
+
+    <!-- Gifs appear here -->
+    <div class="container">
+      <div id="fruit-gifs"></div>
     </div>
 
     <!-- Links to jquery & javascript -->
