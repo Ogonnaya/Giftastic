@@ -1,0 +1,82 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.jumbotron-fluid {
+    background: url("../images/citrus.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-weight: 700;
+}
+
+.input-group {
+    margin: auto;
+}
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(3em + 1.5rem + 4px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.border {
+    border: 2px solid #dee2e6 !important;
+}
+
+.input-group-lg>.custom-select,
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-append>.btn,
+.input-group-lg>.input-group-append>.input-group-text,
+.input-group-lg>.input-group-prepend>.btn,
+.input-group-lg>.input-group-prepend>.input-group-text {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 10rem;
+    text-align: center;
+}
+
+.input-group-lg>.custom-select,
+.input-group-lg>.form-control:not(textarea) {
+    height: calc(2em + 1.5rem + 2px);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#add-fruit {
+    font-size: 1.25rem;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+}
