@@ -9,9 +9,9 @@ body {
     font-weight: 700;
 }
 
-.input-group {
+/* .input-group {
     margin: auto;
-}
+} */
 
 /*
 *
@@ -32,10 +32,10 @@ body {
     padding-left: 0;
 }
 
-.form-control {
+/* .form-control {
     display: block;
     width: 100%;
-    height: calc(3em + 1.5rem + 4px);
+    height: calc(2em + 1rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -45,27 +45,37 @@ body {
     background-clip: padding-box;
     border: 1px solid #ced4da;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
+} */
 
 .border {
     border: 2px solid #dee2e6 !important;
 }
 
-.input-group-lg>.custom-select,
+.col-md-12 {
+    padding: 0px;
+}
+
+/* .input-group-lg>.custom-select,
 .input-group-lg>.form-control,
 .input-group-lg>.input-group-append>.btn,
 .input-group-lg>.input-group-append>.input-group-text,
 .input-group-lg>.input-group-prepend>.btn,
 .input-group-lg>.input-group-prepend>.input-group-text {
     padding: .5rem 1rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 1.5;
     border-radius: 10rem;
-}
+} */
 
 .input-group-lg>.custom-select,
 .input-group-lg>.form-control:not(textarea) {
     height: calc(2em + 1.5rem + 2px);
+}
+
+.input-group>.form-control:not(:last-child) {
+    /* border-top-right-radius: 5rem; */
+    /* border-bottom-right-radius: 0; */
+    border-radius: 5rem;
 }
 
 h1 {
@@ -74,13 +84,18 @@ h1 {
 }
 
 #add-fruit {
-    font-size: 1.25rem;
-    border-top-right-radius: 5rem;
-    border-bottom-right-radius: 5rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    margin: 0rem .25rem;
+    border-radius: 2rem;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
 }
 
 .btn-warning {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: bolder;
     padding: 1rem 2rem;
     margin: .25rem;
     border-radius: 2rem;
