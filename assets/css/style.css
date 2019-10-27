@@ -7,19 +7,8 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
-
-/* .input-group {
-    margin: auto;
-} */
-
-/*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*
-*/
 
 .form-control:focus {
     box-shadow: none;
@@ -32,21 +21,6 @@ body {
     padding-left: 0;
 }
 
-/* .form-control {
-    display: block;
-    width: 100%;
-    height: calc(2em + 1rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: white;
-    background-color: white;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-} */
-
 .border {
     border: 2px solid #dee2e6 !important;
 }
@@ -55,17 +29,6 @@ body {
     padding: 0px;
 }
 
-/* .input-group-lg>.custom-select,
-.input-group-lg>.form-control,
-.input-group-lg>.input-group-append>.btn,
-.input-group-lg>.input-group-append>.input-group-text,
-.input-group-lg>.input-group-prepend>.btn,
-.input-group-lg>.input-group-prepend>.input-group-text {
-    padding: .5rem 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 10rem;
-} */
 
 .input-group-lg>.custom-select,
 .input-group-lg>.form-control:not(textarea) {
@@ -73,14 +36,13 @@ body {
 }
 
 .input-group>.form-control:not(:last-child) {
-    /* border-top-right-radius: 5rem; */
-    /* border-bottom-right-radius: 0; */
     border-radius: 5rem;
 }
 
 h1 {
     color: white;
     margin-bottom: 1rem;
+    font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 #add-fruit {

@@ -11,7 +11,7 @@ $(document).ready(function() {
   ];
 
   console.log(fruits);
-  // Add Buttons to the page
+  // Add Buttons from array to the page
   function createButtons() {
     // Delete GIFs before adding new ones
     $("#fruit-buttons").empty();
@@ -26,15 +26,35 @@ $(document).ready(function() {
     }
   }
 
+  // Add new fruit to array and new button on the page
   $("#add-fruit").on("click", function(event) {
     event.preventDefault();
-    userInput = $("#fruit-input")
+    newFruit = $("#fruit-input")
       .val()
       .trim();
-    console.log(userInput);
-    fruits.push(userInput);
+    console.log(newFruit);
+    fruits.push(newFruit);
     console.log(fruits);
     createButtons();
+  });
+
+  $(document).on("click", ".btn", function() {
+    $("fruit-gifs").empty();
+
+    var fruitButton = $(this).data("name");
+    var queryURL =
+      "https://api.giphy.com/v1/gifs/search?q=" +
+      fruitButton +
+      "&api_key=kqiKKvJG2sEYdrlq3DGOTos6nyNHFnNG&limit=10";
+    console.log(fruitButton);
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(queryURL);
+      console.log(response);
+    });
   });
   createButtons();
 });
