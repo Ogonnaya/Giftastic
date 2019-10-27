@@ -13,8 +13,7 @@ $(document).ready(function() {
   console.log(fruits);
   // Add Buttons from array to the page
   function createButtons() {
-    // Delete GIFs before adding new ones
-    $("#fruit-gifs").empty();
+    $("#fruit-buttons").empty();
 
     // Loop for fruit array
     for (var i = 0; i < fruits.length; i++) {
@@ -29,12 +28,14 @@ $(document).ready(function() {
   // Add new fruit to array and new button on the page
   $("#add-fruit").on("click", function(event) {
     event.preventDefault();
-    newFruit = $("#fruit-input")
+    // $("fruit-gifs").empty();
+    var newFruit = $("#fruit-input")
       .val()
       .trim();
     console.log(newFruit);
     fruits.push(newFruit);
     console.log(fruits);
+
     createButtons();
   });
 
@@ -42,11 +43,11 @@ $(document).ready(function() {
   $(document).on("click", ".btn", function() {
     $("fruit-gifs").empty();
 
-    var fruitButton = $(this).data("name");
+    var fruitButton = $(this).attr("data-name");
     var queryURL =
       "https://api.giphy.com/v1/gifs/search?q=" +
       fruitButton +
-      "&api_key=kqiKKvJG2sEYdrlq3DGOTos6nyNHFnNG&limit=12";
+      "&api_key=fhdo605DvgFDESYqln0r3bZdS9zqyZ4u&limit=10";
     console.log(fruitButton);
 
     $.ajax({
@@ -59,8 +60,10 @@ $(document).ready(function() {
       for (var i = 0; i < response.data.length; i++) {
         var fruitDiv = $("<div>");
         fruitDiv.addClass("fruit-giphy");
+
         var p = $("<p>").text("Rating: " + response.data[i].rating);
         var fruitImage = $("<img>");
+
         fruitImage.attr("src", response.data[i].images.fixed_height_still.url);
         fruitImage.attr(
           "data-still",
@@ -77,19 +80,21 @@ $(document).ready(function() {
 
         $("#fruit-gifs").prepend(fruitDiv);
       }
-
-      $(document).on("click", "img", function() {
-        var state = $(this).attr("data-state");
-
-        if (state === "still") {
-          $(this).attr("src", $(this).attr("data-animate"));
-          $(this).attr("data-state", "animate");
-        } else {
-          $(this).attr("src", $(this).attr("data-still"));
-          $(this).attr("data-state", "still");
-        }
-      });
     });
   });
+
+  // Start and stop gifs from playing
+  $(document).on("click", ".gif", function() {
+    var state = $(this).attr("data-state");
+
+    if (state === "still") {
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
+    } else {
+      $(this).attr("src", $(this).attr("data-still"));
+      $(this).attr("data-state", "still");
+    }
+  });
+
   createButtons();
 });
