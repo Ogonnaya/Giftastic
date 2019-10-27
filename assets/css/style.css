@@ -63,3 +63,13 @@ h1 {
     border-radius: 2rem;
     text-align: center;
 }
+
+.fruit-giphy {
+    display: inline-block;
+    margin: 1rem .5rem;
+}
+
+p {
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+}
